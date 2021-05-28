@@ -9,8 +9,5 @@ sound "bd cp hh" # room "0.75" #size "0.5",
 stut 5 0.75 5 $ palindrome $ sound "bd cp ~"
 ]
 
-
-
-
 d2 silence
 hush
