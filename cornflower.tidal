@@ -1,0 +1,33 @@
+cps (176/60/4)
+
+d1 $ every 8 (linger 0.25) $ every 5 (rev) $ crush "[5*8] 4*3 8 9" # sound "bd? bd sn ~"
+
+d2 $ every 5 (slow 2)$ sound "hh*2? [hh] hh? hh [hh?] hh hh? hh?"
+# pan "0 1 0.5" # crush "4 3 1 5 2 ~"
+
+d3 $ every 3 (rev)$ crush "2 1 0.25 4 9? 7 0.5 ~ " # sound "bd*8 ~ sn? drum? ~ glitch? ~ "
+
+d4 $ every 12 (linger 0.5) $ every 24 (fast 2) $ sound "dr55:5 dr55:4 [dr55:3 dr55:5] ~"
+
+d5 $ every 16 (linger 0.125) $ every 4 (fast 3) $ striate 16
+$ up "0 ~ 19 5/3 12/4 19/5 29 12" # sound "gtr" # crush "7 5 3 0.9" # gain "0.5"
+
+solo $ d6 $every (choose [8,4,2]) (striate (choose [128,64,32])) $every (choose [5,4,2]) (rev)
+$stut' 3  0.75 (#pan "0 0.5 1 0.5 0") $ sound "808bd hh [~ sd?] ~" #crush "8"
+
+d7 $ whenmod 8 1 (#gain "0") $up "[~ 0 ~ [~ 5] ~ ~ [~ 3] ~]" #sound "wobble"
+
+hush
+
+d1 silence
+
+d8 silence
+
+d5 silence
+hush
+
+putStrLn "cornflower"
+
+import Data.Time
+
+getZonedTime

@@ -1,0 +1,24 @@
+cps (196/60/4)
+
+d1 $whenmod 7 6 (fast 5) $every (choose [8,12,16]) (striate (choose [16,24,32,64,128]))$sound "bd(3,8)" #crush "4"
+
+d2 $whenmod 5 4 (brak) $sound "hh*8" #room "0.125" #size "0.5" #gain "0.75"
+
+d3 $whenmod 8 7 (fast 9) $stut 3 0.5 0.25 $sound "sd" #crush "8" #room "0.125 0.01 0 2" #size "4"
+
+d4 $every 4 (fast 3) $ every 5 (#gain "0")$ sound "sine ~ ~ ~" #gain "0.75"
+
+d5 $striate 4 $sound "~ ~ jvbass ~" # up "0"
+
+solo $ d6 $striate 64 $gain "0.25 0.25 0.125 0.25" #sound "pad:1"
+
+d1 silence
+d2 silence
+d3 silence
+
+d4 silence
+
+d5 silence
+d6 silence
+
+hush
