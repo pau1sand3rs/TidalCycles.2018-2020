@@ -1,0 +1,27 @@
+cps (88/60/4)
+
+d1 $ striate 2 $ stack [
+  sound "[808bd [808bd*5]/3 808bd*2 ~]",
+  sound "cp" # gain "0.75",
+  sound "[hh hh hh*2 hh*3 hh*5 hh*8 hh*13 hh*21 hh*34 hh*55 hh*89]" # gain "0.25 0.4 0.3"
+  ]
+
+d2 $ striate 21 $ stut 5 0.7 3  $ sound " . . house:5/3"
+
+d3 $ striate 5 $ sound "moan/3" # gain "0.75 0.5 0.25"
+
+d1 $ whenmod 7 6 (chop 8) $ every 4 (# accelerate "2") $ every 16 (rev) $ sound "808bd:2 808bd:2*2 sd? ~"
+#lpf "1500 5000 3000"
+
+d2 $ whenmod 8 1 (#gain "0.75 0.25") $ n "[c4 ~ fs7 fs5 ~ ds4 ~ g4 ]"
+# s "[supercomparator supersaw supercomparator]*8"
+# delay "0.5" # delaytime "0.75" # delayfeedback " 2 -1"
+#lpf "900"
+
+d3 $ sound "[hh*2 hh hh*4 hh]/3"
+
+d4 $ sound "bd*2"
+
+d3 silence
+
+hush
