@@ -1,0 +1,33 @@
+setcps (125/60/4)
+
+d1 $striate 8 $ sound "tekton ~ tekton:1 ~" # legato 1 #speed 0.5
+d1 $chop (irand 32) $ sound "tekton ~ tekton:1 ~" # legato 1 #speed (irand 3)
+
+d1 $every 4 (jux(rev))$chop 128 $ loopAt 4 $ sound "cavern" #cut 1 #resonance rand #pan sine #speed (irand 5)-(irand 4) #size rand
+
+d2 $s "{bd*2 ~} hh*3 sd? hh*2" #crush (irand 9)-(irand 4)
+
+d1 $loopAt 2 $ sound "crunge" #lpf (irand 8000)
+
+d2 $ splice 3 "0 [1 4] 2 1"$s "tecton/2 tekton:2/3" # cut 1 #crush (irand 8) #speed (irand 5) #lpf "3000 4000 8000"
+
+d3 $s "[bd bd*2][cp sd hh ~] [hh*2 bd ~] [~hh cp]"
+d2 $every 3 (fast 4) $every 2 (#speed 2)$chop 256 $ loopAt "< 1 2 ~ 4>" $sound "tekton tekton:1" #cut 1 #lpf "3000 4000 8000"
+
+hush
+
+d2 $loopAt 8 $ splice 8 "1 [1 7 ~] 3 [4 5]~ 6 7 8" $s "cavern"
+
+d1 $ chew 4 "0 1*3 1 8? 0/2 ~ 5 6" $ n "[0 .. 3][7 .. 4]" # sound "drum"
+
+d1 $ rot "<0 0 1 0>" $s "bd [oh hh] sd [oh hh] bd*2 hh sd hh"
+
+d2 $stut 5 0.5 (-0.2) $n "e1 g2 b3" # s "supergong" # decay (slow 4 sine) # voice (slow 2 sine) #lpf 5000 #resonance sine #squiz (irand 3)
+
+d3 $slow 5 $n "e b g c" #s "gabor" #voice 3 #sustain 6
+
+d1 $every 7 (brak)$s "bd*3 [oh hh] sd/4 [oh hh] bd [oh hh] sd/4 [oh hh]" #squiz (irand 8) #delay #lock 1 #delayt 0.25
+
+d1 silence
+
+d

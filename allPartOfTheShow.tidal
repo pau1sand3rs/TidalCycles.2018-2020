@@ -1,0 +1,9 @@
+drumtraks:6 = k
+drumtraks:9 = s
+drumtraks:4 = h
+
+let pat = "drumtraks:6*2 drumtraks:9 drumtraks:4" ~
+
+d1 $sound $ every 2 (speed 0.25) $ pat
+
+hush

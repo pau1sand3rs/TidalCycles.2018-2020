@@ -1,0 +1,4 @@
+cps (152/60/4)
+
+let a = "drumtraks:6 ~ drumtraks:4*2 ~ drumtraks:1? drumtraks:5 ~"
+let b = "~ ~ ~ ~ drumtraks:4 ~~"

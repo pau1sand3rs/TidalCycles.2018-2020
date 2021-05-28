@@ -1,0 +1,13 @@
+bps 176/60
+
+d2 $ every 4 (rev) $ stut 3 0.5 2 $ n "<[g5 df5 e5 a5] [gf5 d5 c5 g5]*3>" # s "super808 superclap supersquare"
+
+d1 $ jux (rev) $ stut 3 0.5 2 $every 3 (fast (choose[0.5,2,3,32])) $every 7 (#gain "0.0")$ n "<[c5?,ds5,g5][g5,d5,b5]/2 [~]>"
+# s "superpwm"
+# gain "0.2"
+# sustain "0.4 0.5"
+
+d3  $ jux (# crush "2") $every 5 (fast (choose[0.5,1.5,3]))$every 3 (linger 0.25) $every 7 (#gain "0.0")$sound "808bd:1 sd hh*4"
+
+
+hush

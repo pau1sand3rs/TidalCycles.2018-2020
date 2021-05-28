@@ -1,0 +1,30 @@
+
+
+d1 $stut 7 0.5 3 $ sound "808bd hh voodoo:3 ~"
+#lpf ((scale 7000 300 sine) * (slow 7 sine))
+# pan (slowcat [sine, saw, square, tri])
+#resonance ((scale 0.25 0.75 tri) * (slow 4 sine))
+# speed (sine/1.125)
+
+
+
+d2 $ sound "[h/16 [h:4](3,8)]" # cut "1"
+#lpf ((scale 2000 800 saw) * (slow 8 sine))
+#resonance "0.6"
+
+d3 silence
+
+hush
+
+ #accelerate ((scale 1 (-0.25) tri) * (slow 16 sine))
+
+ d3 $every 2 (jux(# speed (density 2 $ sine))) $every 3 (rev) $every 5(linger 0.25)$ sound "808bd*2 ~ sd:1 hh:8*2"
+ #lpf ((scale 7000 300 sine) * (slow 18 sine))
+ # pan (slowcat [sine, saw, square, tri])
+ #resonance ((scale 0.25 0.75 tri) * (slow 4 sine))
+ # speed (sine/1.125)
+
+ d6 $sound "808bd:2*2 ~ sd:1 hh:8*2"
+# speed (sine*4) |+| speed "-0.125" |+| speed "-2"
+
+d6 silence

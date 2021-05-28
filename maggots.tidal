@@ -1,0 +1,12 @@
+
+d1 $every 2 (#gain "0")$every 11 (fast 8)$sound "~ cp"
+
+d2 $every 4 (chop (choose[8,16,32])) $every 2 (rev)$every 4 (linger "0.25")$n (run 8) #sound "amencutup"
+
+d3 $every 4 (slow 1.5)$every 8 (rev)$ every 16 (fast 12)$sound "808bd:1*2 ~ sine? ~"
+
+hush
+
+d4 $sound "hh:1 hh hh ~ hh:1 hh ~"
+
+d5 $sound "bd:5*2"

@@ -1,0 +1,19 @@
+cps (152/60/4)
+
+d1$ spread slow [1,3,1,2,1.5,1,0.75,2] $ jux ((0.75 <~). (# room "0.25 0 0.75 0.1") . (# size "0.5 2.0 3.0") . rev) $ cat[
+every 7 (chop 256) $every 2 (#pan "1 0 1 0")$every 7 (#gain "0.0 1.0") $sound (samples"drumtraks*16" (irand 11)),
+every 3 (chop 32) $sound (samples "drumtraks*16" (irand 32)),
+every 5 (rev) $every 2 (#gain "0.0 1.0") $sound (samples "drumtraks*16" (run 8)),
+whenmod 7 1 (# gain "0.0") $ sound "808bd:1" # crush "3"
+]
+
+d2
+
+d2 $ whenmod 11 2(# gain "0.0") $ cat [
+up "~ 0 18 0  ~ ~ ~ ~" # sound "wobble:1",
+up "~ ~ 0 ~ ~ ~ 3 ~" # sound "wobble:1"
+]
+
+d1 silence
+
+hush

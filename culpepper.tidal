@@ -1,0 +1,22 @@
+drumtraks:0 = cha?
+drumtraks:1 = clap
+drumtraks:2 = cowbell
+drumtraks:3 = crash
+drumtraks:4 = closed hat
+drumtraks:5 = closing hat?
+drumtraks:6 = kick
+drumtraks:7 = ride
+drumtraks:8 = block
+drumtraks:9 = snare
+drumtraks:10 = tambourine
+drumtraks:11 = tom
+drumtraks:12 = low tom
+
+d1 $whenmod 8 7 (jux (#speed 0.5)) $every 7 (#sound "wobble")$every 5 (#sound "drumtraks:10*5")$every 4 (e 7 9)
+$sound  "drumtraks:6*2? drumtraks:4 drumtraks:9 ~"
+
+d2 $every 8 (#gain "0.0")$n "0 ~ 1 -3" #sound "jvbass"
+
+d4 $ n (slow 2 $ segment 16 $ range 0 32 $ sine) # sound "amencutup"
+
+hush

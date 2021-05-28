@@ -1,0 +1,7 @@
+d3 $every 2 (rev) $every (choose[8,24,32]) (chop (choose[8,16,32]))$n(run 8) #sound "glitch"
+
+d2 $every (choose [4,24]) (#gain "0.0")$every (choose [2,16])(linger (choose[0.06,0.125])) $every 16 (#gain "0.0")$sound "808bd:2*2 sd"
+
+d4 $every 4 (linger (choose[0.06,0.75]))$n "0 1 ~ 2"#sound "jvbass"
+
+hush

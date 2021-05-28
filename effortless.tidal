@@ -1,0 +1,12 @@
+
+
+
+d1  $ spread  ($) [slow 2, slow 3, rev, linger 0.5] $foldEvery [2,3,5] (chop 7) $ sound "h:5? moog:4 cp ~"# legato "1"
+
+d2 $whenmod 8 5 (#gain "0.0")$ sound "808bd:3*3?"
+
+d3 $sound "~ sd/5"
+
+d3 silence
+
+hush

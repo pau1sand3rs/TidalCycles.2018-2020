@@ -1,0 +1,26 @@
+
+
+d1 $foldEvery [3,4,5] (chop 4 )$foldEvery[7,8,9] (jux(#speed (0.75))) $every 7 (rev)$every 5 (stut 3 0.5 2) $every 5 (#crush 4)$cat [
+every 3 (slow 4) $sound "bd(5,8)",
+every 2 (jux(linger 0.25)) $every 7 (brak) $ sound "sd(3,8) ",
+sound "bd sd hh(3,8) ~" ,
+striate 8 $sound "fm:5" #legato "0.9"
+]
+
+d1 silence
+
+d2 $every 32 (#gain "0.0")
+$foldEvery [7,8,9] (#gain "0.0")
+$foldEvery [3,4,5] (jux(gap 4))
+$striate 8
+$every 3 (jux(rev))
+$sound "bev"
+#gain "0.7"
+#legato "1"
+
+d3 $every 23 (slow 2)$every 5 (jux(stut 8 0.5 0.8)) $every 8 (jux(chop 32)) $every 11 (jux (#speed (0.75)))$every 2 (rev) $sound "808bd ~ sd:1 ~"
+
+d4 $stut 5 0.5 0.9 $sound "cp/8"
+
+d3 silence
+hush

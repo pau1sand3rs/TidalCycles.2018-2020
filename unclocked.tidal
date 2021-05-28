@@ -1,0 +1,12 @@
+bps (176/60)
+
+d1 $foldEvery [5,8,11] (slow 2.striate 4) $every 3 (jux (rev. linger 0.125.chop 2)) $ cat[
+every 3 (#speed (fast 3 $ sine))$ sound "bd*4 sd ",
+stut 7 0.25 (choose [0.1,0.5,3]) $ sound "cp",
+every 7 (#gain "0.0")$sound "bd(2,7)",
+sound "hh hh*5"
+] # size "0.125" # room "0.125"
+
+d2 $stut 11 0.25 5 $up "25/11 12/13"  #sound "glitch:2"
+
+hush

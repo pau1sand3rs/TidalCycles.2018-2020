@@ -1,0 +1,24 @@
+drumtraks:0 = cha?
+drumtraks:1 = clap
+drumtraks:2 = cowbell
+drumtraks:3 = crash
+drumtraks:4 = closed hat
+drumtraks:5 = closing hat?
+drumtraks:6 = kick
+drumtraks:7 = ride
+drumtraks:8 = block
+drumtraks:9 = snare
+drumtraks:10 = tambourine
+drumtraks:11 = tom
+drumtraks:12 = low tom
+
+d1 $every 5 (jux (linger 0.125)) $every (choose[3,8,13]) (stut (choose[2,3,128,256]) 0.8 (choose[2,5,8]))$ cat [
+every 5 (#crush 3 ) $every 3 (linger "0.125") $every 2 (jux(slow 1.5)) $sound "jvbass drumtraks(2,5?)" # n "6 9 4 5",
+every 2 (jux(chop(choose[16,32,128]))) $sound "h? drumtraks(5?,8)" # n "6 9 8 ~",
+every 3 (brak) $sound "drumtraks*3?" #n "6 ~" #room rand #size rand,
+fast 2 $sound "jazz*4" #n "6*2 8 9" # crush (choose[4,5,6])
+] # speed (rand+0.2)
+
+d2 $sound "~ drumtraks:9"
+
+hush

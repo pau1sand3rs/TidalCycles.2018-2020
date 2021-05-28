@@ -1,0 +1,25 @@
+
+
+d1 $every 4 (linger 0.25)
+$every 8 (jux (fast 2))
+$chop 16
+$rarely (jux (spin (choose [3,5,8])))
+$ n (run (choose[4,8]))
+# s "procshort"
+#speed ((scale 0.75 1.125 sine) * (slow (choose [0.25,2,3,5]) sine))
+# legato "1"
+#lpf ((scale 750 1125 sine) * (slow (choose [2,4,16]) sine))
+# resonance (scale 0.2 0.8 sine)
+
+d1 silence
+
+d2 $weave 8 (sound "bd hh sd ~")
+[lpf ((scale 750 1125 sine) * (slow (choose [2,4,16]) sine)),
+resonance (scale 0.2 0.8 sine),
+ speed "0.1 0.5 2"
+]
+
+hush
+
+
+d3

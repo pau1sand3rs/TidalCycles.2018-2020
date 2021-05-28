@@ -1,0 +1,3 @@
+
+
+d1 $ sound "arpy*8" # up (every 2 (rev) $ run 8)

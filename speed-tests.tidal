@@ -1,0 +1,22 @@
+cps (220/60/4)
+
+d1 $every 5 (linger 0.25) $every 7 (rev)
+$ stut (choose [1,0,33]) 0.25 0.75
+$ every 3 (chop (choose [16,64,128,256]))
+$every 9 (#gain "0.0")
+$ sound "bd sn ~ cp?"
+#speed (fast 2 $ sine)
+#lpf ((scale 7000 300 sine) * (slow 4 sine))
+
+d2 silence
+
+d2  $ foldEvery [5, 11, 13] (fast (choose [-2,-1,3,5]))$gap (choose [16,64,128,256])
+$every 3 (rev)
+$every 7 (#gain "0.0")
+$ n (run 8) # sound "amencutup"
+# speed (slow (choose [3,5,8]) $ saw)
+#gain "0.75"
+
+
+d3
+hush

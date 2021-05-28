@@ -1,0 +1,27 @@
+d1 $ s "superhammond/8 supercomparator/7" # midinote ((irand 13) + (choose[30,50])) # sustain "8 7 6"
+ # accelerate "0.5" # voice "0.5" # pitch1 "0.15" # slide "-0.5" # resonance "0.7"
+ # attack "1" # release "20" # room "0.9" # size "0.9" # orbit "1"
+
+hush
+
+d2 $s "sd"
+
+d2 silence
+
+d3 $stut (choose[13,25]) 0.3 (choose[3,4,5])$s "super808/7 supercomparator/6 rave:0/9" #midinote ((irand 13)+50)
+#attack rand
+#release (slow 4 sine)
+#room rand
+#size rand
+#resonance (slow 13 sine)
+#slide "0.1"
+#accelerate (slow 4 tri)
+
+d4 $ n (arpg "'minor[0,13,4,2,-4]") # sound "sd? supercomparator? rave:4? superpwm? super808*3" #speed (slow 3 sine)
+#delay rand
+#pitch1 "0.1"
+#voice rand
+#resonance (slow 7 sine)+ rand
+#lpf (slow 4 $ rangex 200 8000 sine)
+
+hush

@@ -1,0 +1,22 @@
+
+
+d1 $every 2 (slow 3) $every 3 (linger 0.125) $every 5 (jux (rev))$ up (run 8) # sound "ifdrums"
+#lpf ((scale 7000 300 sine) * (slow 18 sine))
+# pan (slowcat [sine, saw, square, tri])
+#resonance ((scale 0.25 0.75 tri) * (slow 4 sine))
+# speed (sine/1.125)
+
+d2 $every 3 (brak)$every 5 (jux (linger 0.25)) $every 7 (slow 1.5)$ n (run 4) #sound "jazz"
+
+d3 $every 3 (jux (rev))$whenmod 4 1 (#gain "0.0") $n (run 16) #sound "glitch2"
+# resonance ((scale 0.1 0.9 sine) * (slow 32 saw))
+
+d4 $every 3 (chop 32)$every 4 (#speed 0.5)$every 16 (linger 0.125)$stack [
+sound "808bd:2*2",
+sound "808hc:2/2",
+sound "808:1/8"
+]
+# pan (slowcat [sine, saw, square, tri])
+
+d2 silence
+hush
