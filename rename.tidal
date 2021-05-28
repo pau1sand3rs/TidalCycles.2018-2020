@@ -1,0 +1,16 @@
+bps (152/60)
+
+d1 $ every 3 (rev)$every 5 (#gain "0.0")$ sound "[bd] [~] [bd*2] [hh]" # lpf(scale 100 3000 sine)
+
+d1 $ jux ((# pan "1.0 0 1.0") . slow 4 . (# lpf(scale 200 3000 sine)) . chop (choose[2,32,64,128,256])) $ every 3 (linger 0.125)$ cat [
+sound "[bd] [hh] [bd] [hh] [cp] [hh] [hh] [bd] " # lpf(scale 1000 2000 sine),
+sound "[hh] [hh] [~bd] [~] [hh] [cp] [hh] [~] ",
+sound "bd cp hh" # room "0.75" #size "0.5",
+stut 5 0.75 5 $ palindrome $ sound "bd cp ~"
+]
+
+
+
+
+d2 silence
+hush

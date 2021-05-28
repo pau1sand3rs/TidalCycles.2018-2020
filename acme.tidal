@@ -1,0 +1,15 @@
+cps (120/60/4)
+
+let pat = "0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 "
+
+let k = "drumtraks:6*2 drumtraks:4 drumtraks:1? ~"
+a =(3/2)
+b = (5/3)
+
+d1  $every 7 (rev) $every 11 (slow 4) $every 13 (jux(gap 4). fast a. linger (choose[0.125,0.25,0.75])) $sound k #room "0.5" #size "0.5"
+
+d2 $up "0/5 ~ ~ 3/11" #sound "wobble" #gain "1.2"
+
+d3 $every 13 (stut 3 0.6 0.9) $sound "h/13" #gain "0.7"
+
+hush

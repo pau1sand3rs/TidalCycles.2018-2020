@@ -1,0 +1,14 @@
+cps (176/60/4)
+
+d1 $whenmod 6 5 (#gain "0.0") $ every 8 (fast 3) $striate (64)$ sound "bd space/3" # room "0.25" # size "0.25"
+
+d2 $every 12 (brak)$every 4 (fast 2) $every 2 (#crush 3) $ sound "bd bd sd hh*3"
+
+d3 $every 4 (striate 16)$ sound "pad:2" #crush "4" #gain "0.75"
+
+t3 (xfadeIn 16) $whenmod 8 7 (#gain "0.0") $every 12 (brak)$every 4 (fast 2) $every 2 (#crush 3) $ sound "bd bd sd hh*3"
+
+d4 $whenmod 4 3 (#gain "0.0")$ jux (#shape "0.5") $every 4 (striate 16)$gain "0.2 0.0 0.75 0.5 0.2 0.0 0.25 0.5" # sound "pad:2" #crush "4"
+
+d2 silence
+hush

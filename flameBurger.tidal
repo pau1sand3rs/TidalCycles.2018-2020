@@ -1,0 +1,32 @@
+bps (176/60)
+
+d1 $ every 7 (linger 0.25) $ every 17 (#gain "0.0")$ sound "808bd hh*2 hh hh"
+
+d1 silence
+
+d2 $every 3 (slow 1.5) $ whenmod 13 11 (#gain "0.0")$up "0 ~ ~ ~ 15 ~ 16" # sound "bass1:8" #gain "0.7"
+
+d3 $ every 13 (slow 1.5)$every 5 (# lpf "2000")$stut 7 0.5 2.5 $ up "12/3 27/5 19/7 0/11 ~"
+# sound "feel"
+# room "0.75"
+# size "0.5"
+# orbit "1"
+# gain "0.4"
+
+d4 $sound "birds3:4"  #room "0.25" # size "0.75"
+
+d5 $every 17 (fast 41) $every 7 (#legato "0.1*41")$ sound "less/13" #crush "5"
+
+d6 silence
+
+d5 silence
+
+d6 $stut 13 0.5 5 $whenmod 17 1 (#gain "0.0")$ up "0 3 ~ 7" #sound "blip:1"
+# room "0.75"
+# size "0.5"
+
+
+
+d2 silence
+
+hush

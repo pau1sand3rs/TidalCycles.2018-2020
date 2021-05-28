@@ -1,0 +1,16 @@
+
+cps (152/60/4)
+
+d1 $every 3 (rev)$ every 2 (jux # gain "0.5")$ striate (32)$ sound "34mph:1"
+
+
+d2 $ every 5 (fast 6)$every 4 (#crush "4")$ sound "808bd:1/2" # cutoff (scale 300 5000 $ slow 8 $ sine) # resonance "0.6"
+
+d1 $every 5 (rev)$ every 16 (linger 0.25) $ every 4 (#gain "0.0")$sound (samples "amencutup *8" (run 8))
+# cutoff (scale 300 3000 $ slow 16 $ tri) # resonance "0.4 0.2 0.1 0.6"
+
+d3 $ stut 3 0.5 1.75 $sound "crow/16" #cutoff "3000" # resonance "0.1" # room "0.5" # size "0.5"
+
+d4 $ sound "808bd:*4"
+
+hush
